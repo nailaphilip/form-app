@@ -1,21 +1,21 @@
 import React from 'react';
 import './Form.css';
 
-const Form = () => {
+const Form = (props) => {
     return (
         <div className='form-container'>
-            <form>
+            <form onSubmit={props.submit}>
                 <div className='form-group'> 
                 <label>First name:</label>
-                <input type="text" />
+                <input type="text" name="first_name"/>
                 </div>
                 <div className='form-group'> 
                 <label>Last name:</label>
-                <input type="text" />
+                <input type="text" name="last_name"/>
                 </div>
                 <div className='form-group'> 
                 <label>Phone:</label>
-                <input type="number" />
+                <input type="number" name="phone"/>
                 </div>
                 <div className='form-group'> 
                 <label>Role:</label>

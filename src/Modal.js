@@ -1,21 +1,21 @@
 import React from 'react';
-import './Preview.css';
+import './Modal.css';
 
-const Preview = (props) => {
+const Model = (props) => {
     return (
-        <div className='preview-container'>
-            <div className='notepad'>
+        <div className='model-container'>
+            <div className='model-text'>
+                <h2>This is your note:</h2>
                 <p>First name:<span>{props.firstname}</span></p>
                 <p>Last name:<span>{props.firstname}</span></p>
                 <p>Phone:<span>{props.phone}</span></p>
                 <p>Role:<span>{props.role}</span></p>
                 <p>Message:<span>{props.message}</span></p>
-            </div>
-            <div class="holes hole-top"></div>
-            <div class="holes hole-middle"></div>
-            <div class="holes hole-bottom"></div>
-</div>
+        </div>
+        <button>Yes, I am sure</button>
+        <button>No</button>
+        </div>
     );
 };
 
-export default Preview;
+export default Model;

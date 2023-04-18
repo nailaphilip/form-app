@@ -1,17 +1,31 @@
 import React, { Component } from 'react';
 import Form from './Form';
 import Preview from './Preview';
-import Model from './Model';
+import Modal from './Modal';
 import './App.css';
 
 
 class App extends Component {
+  state={
+    showModal: false
+
+  }
+
+  modalHandler = (e) => {
+    e.preventDefault()
+    this.setState({
+      showModal: !this.state.showModal
+    })
+    console.log("I work");
+  }
+
+
   render() {
     return (
       <div className='app-container'>
-        <Form />
+        <Form submit={this.modalHandler}/>
         <Preview />
-        <Model />
+        {this.state.showModal && <Modal />}
       </div>
     );
   }
